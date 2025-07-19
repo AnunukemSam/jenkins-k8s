@@ -1,0 +1,27 @@
+controller:
+  admin:
+    username: admin
+    password: admin123
+
+  serviceType: LoadBalancer
+
+  installPlugins:
+    - kubernetes
+    - workflow-aggregator
+    - git
+    - configuration-as-code
+    - credentials-binding
+    - github
+
+  resources:
+    requests:
+      cpu: "500m"
+      memory: "1Gi"
+    limits:
+      cpu: "1"
+      memory: "2Gi"
+
+  persistence:
+    enabled: true
+    size: 10Gi
+    storageClass: default
